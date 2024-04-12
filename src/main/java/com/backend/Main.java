@@ -2,15 +2,12 @@ package com.backend;
 
 public class Main {
     public static void main(String[] args) {
-       solver my = new solver(6, 8, 1);
-       my.generatePopulation();
-       my.fitnessFunction();
-
-       int bestScore = 1000000000;
-       int c = 0;
-       while(bestScore > 0){
-           bestScore = my.generateNewGeneration();
-           c ++;
-        }
+       solver my = new solver(8, 250, 1);
+       System.out.println(my.winScore);
+    int board[]=my.getAnAnswer();
+     for (int i = 0; i < board.length; i++) {
+        System.out.print(board[i] + " ");
+    }
+    System.out.println();
     }
 }
